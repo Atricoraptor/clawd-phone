@@ -1,0 +1,36 @@
+# Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+
+# Android
+android/.gradle/
+android/app/build/
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Local assistant tooling
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# APKs
+*.apk
+
+# Showcase media
+showcase/*.mp4
+
+# Generated
+pubspec.lock

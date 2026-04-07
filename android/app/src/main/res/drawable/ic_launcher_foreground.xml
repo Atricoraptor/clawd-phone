@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Material Icons 'assistant' icon, scaled and centered in adaptive icon safe zone -->
+    <group
+        android:scaleX="3"
+        android:scaleY="3"
+        android:translateX="18"
+        android:translateY="18"
+        android:pivotX="0"
+        android:pivotY="0">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M19,2H5C3.9,2,3,2.9,3,4v14c0,1.1,0.9,2,2,2h4l3,3,3-3h4c1.1,0,2-0.9,2-2V4C21,2.9,20.1,2,19,2z M13.88,12.88L12,17l-1.88-4.12L6,11l4.12-1.88L12,5l1.88,4.12L18,11L13.88,12.88z" />
+    </group>
+</vector>
