@@ -91,7 +91,7 @@ APK will be at `build/app/outputs/flutter-apk/app-debug.apk` or `build/app/outpu
 You can download the latest release APK from the GitHub Releases page, or install it over USB:
 
 ```bash
-adb install build/app/outputs/flutter-apk/clawd-phone-v1.0.0-release.apk
+adb install ~/Downloads/clawd-phone-v1.0.0-release.apk
 ```
 
 ## Permissions
@@ -113,7 +113,9 @@ adb install build/app/outputs/flutter-apk/clawd-phone-v1.0.0-release.apk
 3. Grant permissions in Settings (files, contacts, calendar, etc.)
 4. Ask stuff
 
-![First launch permissions screen](./showcase/permissions.jpg)
+<p align="center">
+  <img src="./showcase/permissions.jpg" alt="First launch permissions screen" width="320" />
+</p>
 
 ## Tools
 
